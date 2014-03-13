@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2304411518D1FE9B00851537 /* NetworkStatusLogItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2304410E18D1FE9B00851537 /* NetworkStatusLogItem.m */; };
+		2304411618D1FE9B00851537 /* _NetworkStatusLogItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2304411118D1FE9B00851537 /* _NetworkStatusLogItem.m */; };
+		2304411718D1FE9B00851537 /* NetworkStatusLogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2304411318D1FE9B00851537 /* NetworkStatusLogger.xcdatamodeld */; };
 		236D32E018D1B0FF0038F86C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32DF18D1B0FF0038F86C /* Foundation.framework */; };
 		236D32E218D1B0FF0038F86C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32E118D1B0FF0038F86C /* CoreGraphics.framework */; };
 		236D32E418D1B0FF0038F86C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32E318D1B0FF0038F86C /* UIKit.framework */; };
@@ -19,7 +22,32 @@
 		236D32FB18D1B0FF0038F86C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32E318D1B0FF0038F86C /* UIKit.framework */; };
 		236D330318D1B0FF0038F86C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 236D330118D1B0FF0038F86C /* InfoPlist.strings */; };
 		236D330518D1B0FF0038F86C /* NetworkStatusLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 236D330418D1B0FF0038F86C /* NetworkStatusLoggerTests.m */; };
+		236D331818D1DF230038F86C /* mogen.sh in Resources */ = {isa = PBXBuildFile; fileRef = 236D331618D1DF230038F86C /* mogen.sh */; };
+		236D331918D1DF230038F86C /* mogend.sh in Resources */ = {isa = PBXBuildFile; fileRef = 236D331718D1DF230038F86C /* mogend.sh */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		236D331A18D1E0050038F86C /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = wrapper.xcdatamodel;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).mom",
+			);
+			script = "echo \"Running mogen\"\n\"${PROJECT_DIR}/NetworkStatusLogger/Scripts/mogen.sh\"";
+		};
+		236D331B18D1E15C0038F86C /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = wrapper.xcdatamodeld;
+			isEditable = 1;
+			outputFiles = (
+				"$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).mom",
+			);
+			script = "echo \"Running mogend\"\n\"${PROJECT_DIR}/NetworkStatusLogger/Scripts/mogend.sh\"";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		236D32FC18D1B0FF0038F86C /* PBXContainerItemProxy */ = {
@@ -32,6 +60,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2304410D18D1FE9B00851537 /* NetworkStatusLogItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkStatusLogItem.h; sourceTree = "<group>"; };
+		2304410E18D1FE9B00851537 /* NetworkStatusLogItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkStatusLogItem.m; sourceTree = "<group>"; };
+		2304411018D1FE9B00851537 /* _NetworkStatusLogItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _NetworkStatusLogItem.h; sourceTree = "<group>"; };
+		2304411118D1FE9B00851537 /* _NetworkStatusLogItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _NetworkStatusLogItem.m; sourceTree = "<group>"; };
+		2304411218D1FE9B00851537 /* ModelIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelIncludes.h; sourceTree = "<group>"; };
+		2304411418D1FE9B00851537 /* NetworkStatusLogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetworkStatusLogger.xcdatamodel; sourceTree = "<group>"; };
 		236D32DC18D1B0FF0038F86C /* NetworkStatusLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkStatusLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236D32DF18D1B0FF0038F86C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		236D32E118D1B0FF0038F86C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,6 +82,8 @@
 		236D330018D1B0FF0038F86C /* NetworkStatusLoggerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NetworkStatusLoggerTests-Info.plist"; sourceTree = "<group>"; };
 		236D330218D1B0FF0038F86C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		236D330418D1B0FF0038F86C /* NetworkStatusLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkStatusLoggerTests.m; sourceTree = "<group>"; };
+		236D331618D1DF230038F86C /* mogen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogen.sh; sourceTree = "<group>"; };
+		236D331718D1DF230038F86C /* mogend.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogend.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +110,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2304410C18D1FE9B00851537 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2304410D18D1FE9B00851537 /* NetworkStatusLogItem.h */,
+				2304410E18D1FE9B00851537 /* NetworkStatusLogItem.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2304410F18D1FE9B00851537 /* EntitiesMachine */ = {
+			isa = PBXGroup;
+			children = (
+				2304411018D1FE9B00851537 /* _NetworkStatusLogItem.h */,
+				2304411118D1FE9B00851537 /* _NetworkStatusLogItem.m */,
+			);
+			path = EntitiesMachine;
+			sourceTree = "<group>";
+		};
 		236D32D318D1B0FF0038F86C = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +163,8 @@
 			children = (
 				236D32EE18D1B0FF0038F86C /* NSLAppDelegate.h */,
 				236D32EF18D1B0FF0038F86C /* NSLAppDelegate.m */,
+				236D331118D1B9570038F86C /* Models */,
+				236D331518D1DF230038F86C /* Scripts */,
 				236D32F118D1B0FF0038F86C /* Images.xcassets */,
 				236D32E618D1B0FF0038F86C /* Supporting Files */,
 			);
@@ -144,6 +200,26 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		236D331118D1B9570038F86C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2304411218D1FE9B00851537 /* ModelIncludes.h */,
+				2304411318D1FE9B00851537 /* NetworkStatusLogger.xcdatamodeld */,
+				2304410C18D1FE9B00851537 /* Entities */,
+				2304410F18D1FE9B00851537 /* EntitiesMachine */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		236D331518D1DF230038F86C /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				236D331618D1DF230038F86C /* mogen.sh */,
+				236D331718D1DF230038F86C /* mogend.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +232,8 @@
 				236D32DA18D1B0FF0038F86C /* Resources */,
 			);
 			buildRules = (
+				236D331B18D1E15C0038F86C /* PBXBuildRule */,
+				236D331A18D1E0050038F86C /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -220,7 +298,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				236D331918D1DF230038F86C /* mogend.sh in Resources */,
 				236D32EA18D1B0FF0038F86C /* InfoPlist.strings in Resources */,
+				236D331818D1DF230038F86C /* mogen.sh in Resources */,
 				236D32F218D1B0FF0038F86C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,8 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2304411718D1FE9B00851537 /* NetworkStatusLogger.xcdatamodeld in Sources */,
+				2304411518D1FE9B00851537 /* NetworkStatusLogItem.m in Sources */,
 				236D32F018D1B0FF0038F86C /* NSLAppDelegate.m in Sources */,
 				236D32EC18D1B0FF0038F86C /* main.m in Sources */,
+				2304411618D1FE9B00851537 /* _NetworkStatusLogItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +525,7 @@
 				236D330A18D1B0FF0038F86C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		236D330B18D1B0FF0038F86C /* Build configuration list for PBXNativeTarget "NetworkStatusLoggerTests" */ = {
 			isa = XCConfigurationList;
@@ -450,8 +534,22 @@
 				236D330D18D1B0FF0038F86C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2304411318D1FE9B00851537 /* NetworkStatusLogger.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2304411418D1FE9B00851537 /* NetworkStatusLogger.xcdatamodel */,
+			);
+			currentVersion = 2304411418D1FE9B00851537 /* NetworkStatusLogger.xcdatamodel */;
+			path = NetworkStatusLogger.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 236D32D418D1B0FF0038F86C /* Project object */;
 }
