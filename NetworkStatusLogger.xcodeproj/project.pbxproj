@@ -10,6 +10,9 @@
 		2304411518D1FE9B00851537 /* NetworkStatusLogItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2304410E18D1FE9B00851537 /* NetworkStatusLogItem.m */; };
 		2304411618D1FE9B00851537 /* _NetworkStatusLogItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 2304411118D1FE9B00851537 /* _NetworkStatusLogItem.m */; };
 		2304411718D1FE9B00851537 /* NetworkStatusLogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2304411318D1FE9B00851537 /* NetworkStatusLogger.xcdatamodeld */; };
+		2304412118D2201000851537 /* NSLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2304411F18D2201000851537 /* NSLRootViewController.m */; };
+		2304412218D2201000851537 /* NSLRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2304412018D2201000851537 /* NSLRootViewController.xib */; };
+		2304412418D222FA00851537 /* NSLMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2304412318D222FA00851537 /* NSLMainWindow.xib */; };
 		236D32E018D1B0FF0038F86C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32DF18D1B0FF0038F86C /* Foundation.framework */; };
 		236D32E218D1B0FF0038F86C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32E118D1B0FF0038F86C /* CoreGraphics.framework */; };
 		236D32E418D1B0FF0038F86C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32E318D1B0FF0038F86C /* UIKit.framework */; };
@@ -66,6 +69,10 @@
 		2304411118D1FE9B00851537 /* _NetworkStatusLogItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _NetworkStatusLogItem.m; sourceTree = "<group>"; };
 		2304411218D1FE9B00851537 /* ModelIncludes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelIncludes.h; sourceTree = "<group>"; };
 		2304411418D1FE9B00851537 /* NetworkStatusLogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetworkStatusLogger.xcdatamodel; sourceTree = "<group>"; };
+		2304411E18D2201000851537 /* NSLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLRootViewController.h; sourceTree = "<group>"; };
+		2304411F18D2201000851537 /* NSLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLRootViewController.m; sourceTree = "<group>"; };
+		2304412018D2201000851537 /* NSLRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSLRootViewController.xib; sourceTree = "<group>"; };
+		2304412318D222FA00851537 /* NSLMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSLMainWindow.xib; sourceTree = "<group>"; };
 		236D32DC18D1B0FF0038F86C /* NetworkStatusLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkStatusLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236D32DF18D1B0FF0038F86C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		236D32E118D1B0FF0038F86C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -128,6 +135,16 @@
 			path = EntitiesMachine;
 			sourceTree = "<group>";
 		};
+		2304411D18D2201000851537 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2304411E18D2201000851537 /* NSLRootViewController.h */,
+				2304411F18D2201000851537 /* NSLRootViewController.m */,
+				2304412018D2201000851537 /* NSLRootViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		236D32D318D1B0FF0038F86C = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +180,8 @@
 			children = (
 				236D32EE18D1B0FF0038F86C /* NSLAppDelegate.h */,
 				236D32EF18D1B0FF0038F86C /* NSLAppDelegate.m */,
+				2304412318D222FA00851537 /* NSLMainWindow.xib */,
+				2304411D18D2201000851537 /* Controllers */,
 				236D331118D1B9570038F86C /* Models */,
 				236D331518D1DF230038F86C /* Scripts */,
 				236D32F118D1B0FF0038F86C /* Images.xcassets */,
@@ -300,7 +319,9 @@
 			files = (
 				236D331918D1DF230038F86C /* mogend.sh in Resources */,
 				236D32EA18D1B0FF0038F86C /* InfoPlist.strings in Resources */,
+				2304412418D222FA00851537 /* NSLMainWindow.xib in Resources */,
 				236D331818D1DF230038F86C /* mogen.sh in Resources */,
+				2304412218D2201000851537 /* NSLRootViewController.xib in Resources */,
 				236D32F218D1B0FF0038F86C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2304412118D2201000851537 /* NSLRootViewController.m in Sources */,
 				2304411718D1FE9B00851537 /* NetworkStatusLogger.xcdatamodeld in Sources */,
 				2304411518D1FE9B00851537 /* NetworkStatusLogItem.m in Sources */,
 				236D32F018D1B0FF0038F86C /* NSLAppDelegate.m in Sources */,
