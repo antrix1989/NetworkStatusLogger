@@ -7,6 +7,7 @@
 //
 
 #import "NSLAppDelegate.h"
+#import "NSLRootViewController.h"
 
 static NSString *kDBName = @"NetworkStatusLogger";
 
@@ -26,6 +27,9 @@ static NSString *kDBName = @"NetworkStatusLogger";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSLRootViewController *rootViewController = (NSLRootViewController *)self.window.rootViewController;
+    rootViewController.managedObjectContext = self.managedObjectContext;
+    
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -72,7 +76,8 @@ static NSString *kDBName = @"NetworkStatusLogger";
     
     NSDictionary *options = @{
                               NSInferMappingModelAutomaticallyOption : @(YES),
-                              NSMigratePersistentStoresAutomaticallyOption: @(YES)
+                              NSMigratePersistentStoresAutomaticallyOption: @(YES),
+                              NSSQLitePragmasOption: @{@"journal_mode": @"delete"}
                               };
     
     NSError *error = nil;

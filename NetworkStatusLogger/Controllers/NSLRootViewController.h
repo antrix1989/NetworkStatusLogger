@@ -8,4 +8,6 @@
 
 @interface NSLRootViewController : UIViewController
 
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 @end

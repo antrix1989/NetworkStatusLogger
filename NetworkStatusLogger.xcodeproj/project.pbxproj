@@ -23,6 +23,8 @@
 		236D331818D1DF230038F86C /* mogen.sh in Resources */ = {isa = PBXBuildFile; fileRef = 236D331618D1DF230038F86C /* mogen.sh */; };
 		236D331918D1DF230038F86C /* mogend.sh in Resources */ = {isa = PBXBuildFile; fileRef = 236D331718D1DF230038F86C /* mogend.sh */; };
 		23A3FDC618D2F94E0058924E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A3FDC518D2F94E0058924E /* CoreData.framework */; };
+		23A3FDCF18D47EFD0058924E /* NSLNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A3FDCE18D47EFD0058924E /* NSLNetworkService.m */; };
+		9CA9E0032A074F56884769D2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E44FAF84C9BA4B8ABEB97AD4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -73,6 +75,10 @@
 		236D331618D1DF230038F86C /* mogen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogen.sh; sourceTree = "<group>"; };
 		236D331718D1DF230038F86C /* mogend.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogend.sh; sourceTree = "<group>"; };
 		23A3FDC518D2F94E0058924E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		23A3FDCD18D47EFD0058924E /* NSLNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLNetworkService.h; sourceTree = "<group>"; };
+		23A3FDCE18D47EFD0058924E /* NSLNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLNetworkService.m; sourceTree = "<group>"; };
+		CFE7E5505FB440869E757FED /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		E44FAF84C9BA4B8ABEB97AD4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,7 @@
 				236D32E218D1B0FF0038F86C /* CoreGraphics.framework in Frameworks */,
 				236D32E418D1B0FF0038F86C /* UIKit.framework in Frameworks */,
 				236D32E018D1B0FF0038F86C /* Foundation.framework in Frameworks */,
+				9CA9E0032A074F56884769D2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +131,7 @@
 				236D32E518D1B0FF0038F86C /* NetworkStatusLogger */,
 				236D32DE18D1B0FF0038F86C /* Frameworks */,
 				236D32DD18D1B0FF0038F86C /* Products */,
+				CFE7E5505FB440869E757FED /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +150,7 @@
 				236D32DF18D1B0FF0038F86C /* Foundation.framework */,
 				236D32E118D1B0FF0038F86C /* CoreGraphics.framework */,
 				236D32E318D1B0FF0038F86C /* UIKit.framework */,
+				E44FAF84C9BA4B8ABEB97AD4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,6 +161,8 @@
 				236D32EE18D1B0FF0038F86C /* NSLAppDelegate.h */,
 				236D32EF18D1B0FF0038F86C /* NSLAppDelegate.m */,
 				2304412318D222FA00851537 /* NSLMainWindow.xib */,
+				23A3FDCD18D47EFD0058924E /* NSLNetworkService.h */,
+				23A3FDCE18D47EFD0058924E /* NSLNetworkService.m */,
 				2304411D18D2201000851537 /* Controllers */,
 				236D331118D1B9570038F86C /* Models */,
 				236D331518D1DF230038F86C /* Scripts */,
@@ -199,9 +210,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 236D330818D1B0FF0038F86C /* Build configuration list for PBXNativeTarget "NetworkStatusLogger" */;
 			buildPhases = (
+				5A6E32CCBF014F749F38A99D /* Check Pods Manifest.lock */,
 				236D32D818D1B0FF0038F86C /* Sources */,
 				236D32D918D1B0FF0038F86C /* Frameworks */,
 				236D32DA18D1B0FF0038F86C /* Resources */,
+				5E58F19759854B1E9807116F /* Copy Pods Resources */,
 			);
 			buildRules = (
 				236D331B18D1E15C0038F86C /* PBXBuildRule */,
@@ -257,6 +270,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5A6E32CCBF014F749F38A99D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5E58F19759854B1E9807116F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		236D32D818D1B0FF0038F86C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -266,6 +312,7 @@
 				2304411718D1FE9B00851537 /* NetworkStatusLogger.xcdatamodeld in Sources */,
 				2304411518D1FE9B00851537 /* NetworkStatusLogItem.m in Sources */,
 				236D32F018D1B0FF0038F86C /* NSLAppDelegate.m in Sources */,
+				23A3FDCF18D47EFD0058924E /* NSLNetworkService.m in Sources */,
 				236D32EC18D1B0FF0038F86C /* main.m in Sources */,
 				2304411618D1FE9B00851537 /* _NetworkStatusLogItem.m in Sources */,
 			);
@@ -359,6 +406,7 @@
 		};
 		236D330918D1B0FF0038F86C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE7E5505FB440869E757FED /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -372,6 +420,7 @@
 		};
 		236D330A18D1B0FF0038F86C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFE7E5505FB440869E757FED /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
