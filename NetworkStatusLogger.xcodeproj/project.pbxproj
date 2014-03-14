@@ -27,6 +27,7 @@
 		236D330518D1B0FF0038F86C /* NetworkStatusLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 236D330418D1B0FF0038F86C /* NetworkStatusLoggerTests.m */; };
 		236D331818D1DF230038F86C /* mogen.sh in Resources */ = {isa = PBXBuildFile; fileRef = 236D331618D1DF230038F86C /* mogen.sh */; };
 		236D331918D1DF230038F86C /* mogend.sh in Resources */ = {isa = PBXBuildFile; fileRef = 236D331718D1DF230038F86C /* mogend.sh */; };
+		23A3FDC618D2F94E0058924E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A3FDC518D2F94E0058924E /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -91,6 +92,7 @@
 		236D330418D1B0FF0038F86C /* NetworkStatusLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkStatusLoggerTests.m; sourceTree = "<group>"; };
 		236D331618D1DF230038F86C /* mogen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogen.sh; sourceTree = "<group>"; };
 		236D331718D1DF230038F86C /* mogend.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogend.sh; sourceTree = "<group>"; };
+		23A3FDC518D2F94E0058924E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A3FDC618D2F94E0058924E /* CoreData.framework in Frameworks */,
 				236D32E218D1B0FF0038F86C /* CoreGraphics.framework in Frameworks */,
 				236D32E418D1B0FF0038F86C /* UIKit.framework in Frameworks */,
 				236D32E018D1B0FF0038F86C /* Foundation.framework in Frameworks */,
@@ -167,6 +170,7 @@
 		236D32DE18D1B0FF0038F86C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23A3FDC518D2F94E0058924E /* CoreData.framework */,
 				236D32DF18D1B0FF0038F86C /* Foundation.framework */,
 				236D32E118D1B0FF0038F86C /* CoreGraphics.framework */,
 				236D32E318D1B0FF0038F86C /* UIKit.framework */,
