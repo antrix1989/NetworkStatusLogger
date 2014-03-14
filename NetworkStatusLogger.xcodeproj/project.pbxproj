@@ -20,11 +20,6 @@
 		236D32EC18D1B0FF0038F86C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 236D32EB18D1B0FF0038F86C /* main.m */; };
 		236D32F018D1B0FF0038F86C /* NSLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 236D32EF18D1B0FF0038F86C /* NSLAppDelegate.m */; };
 		236D32F218D1B0FF0038F86C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 236D32F118D1B0FF0038F86C /* Images.xcassets */; };
-		236D32F918D1B0FF0038F86C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32F818D1B0FF0038F86C /* XCTest.framework */; };
-		236D32FA18D1B0FF0038F86C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32DF18D1B0FF0038F86C /* Foundation.framework */; };
-		236D32FB18D1B0FF0038F86C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32E318D1B0FF0038F86C /* UIKit.framework */; };
-		236D330318D1B0FF0038F86C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 236D330118D1B0FF0038F86C /* InfoPlist.strings */; };
-		236D330518D1B0FF0038F86C /* NetworkStatusLoggerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 236D330418D1B0FF0038F86C /* NetworkStatusLoggerTests.m */; };
 		236D331818D1DF230038F86C /* mogen.sh in Resources */ = {isa = PBXBuildFile; fileRef = 236D331618D1DF230038F86C /* mogen.sh */; };
 		236D331918D1DF230038F86C /* mogend.sh in Resources */ = {isa = PBXBuildFile; fileRef = 236D331718D1DF230038F86C /* mogend.sh */; };
 		23A3FDC618D2F94E0058924E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A3FDC518D2F94E0058924E /* CoreData.framework */; };
@@ -53,16 +48,6 @@
 		};
 /* End PBXBuildRule section */
 
-/* Begin PBXContainerItemProxy section */
-		236D32FC18D1B0FF0038F86C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 236D32D418D1B0FF0038F86C /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 236D32DB18D1B0FF0038F86C;
-			remoteInfo = NetworkStatusLogger;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		2304410D18D1FE9B00851537 /* NetworkStatusLogItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkStatusLogItem.h; sourceTree = "<group>"; };
 		2304410E18D1FE9B00851537 /* NetworkStatusLogItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkStatusLogItem.m; sourceTree = "<group>"; };
@@ -85,11 +70,6 @@
 		236D32EE18D1B0FF0038F86C /* NSLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSLAppDelegate.h; sourceTree = "<group>"; };
 		236D32EF18D1B0FF0038F86C /* NSLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSLAppDelegate.m; sourceTree = "<group>"; };
 		236D32F118D1B0FF0038F86C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		236D32F718D1B0FF0038F86C /* NetworkStatusLoggerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkStatusLoggerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		236D32F818D1B0FF0038F86C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		236D330018D1B0FF0038F86C /* NetworkStatusLoggerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NetworkStatusLoggerTests-Info.plist"; sourceTree = "<group>"; };
-		236D330218D1B0FF0038F86C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		236D330418D1B0FF0038F86C /* NetworkStatusLoggerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkStatusLoggerTests.m; sourceTree = "<group>"; };
 		236D331618D1DF230038F86C /* mogen.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogen.sh; sourceTree = "<group>"; };
 		236D331718D1DF230038F86C /* mogend.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mogend.sh; sourceTree = "<group>"; };
 		23A3FDC518D2F94E0058924E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -104,16 +84,6 @@
 				236D32E218D1B0FF0038F86C /* CoreGraphics.framework in Frameworks */,
 				236D32E418D1B0FF0038F86C /* UIKit.framework in Frameworks */,
 				236D32E018D1B0FF0038F86C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		236D32F418D1B0FF0038F86C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				236D32F918D1B0FF0038F86C /* XCTest.framework in Frameworks */,
-				236D32FB18D1B0FF0038F86C /* UIKit.framework in Frameworks */,
-				236D32FA18D1B0FF0038F86C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				236D32E518D1B0FF0038F86C /* NetworkStatusLogger */,
-				236D32FE18D1B0FF0038F86C /* NetworkStatusLoggerTests */,
 				236D32DE18D1B0FF0038F86C /* Frameworks */,
 				236D32DD18D1B0FF0038F86C /* Products */,
 			);
@@ -162,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				236D32DC18D1B0FF0038F86C /* NetworkStatusLogger.app */,
-				236D32F718D1B0FF0038F86C /* NetworkStatusLoggerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,7 +142,6 @@
 				236D32DF18D1B0FF0038F86C /* Foundation.framework */,
 				236D32E118D1B0FF0038F86C /* CoreGraphics.framework */,
 				236D32E318D1B0FF0038F86C /* UIKit.framework */,
-				236D32F818D1B0FF0038F86C /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -201,24 +168,6 @@
 				236D32E818D1B0FF0038F86C /* InfoPlist.strings */,
 				236D32EB18D1B0FF0038F86C /* main.m */,
 				236D32ED18D1B0FF0038F86C /* NetworkStatusLogger-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		236D32FE18D1B0FF0038F86C /* NetworkStatusLoggerTests */ = {
-			isa = PBXGroup;
-			children = (
-				236D330418D1B0FF0038F86C /* NetworkStatusLoggerTests.m */,
-				236D32FF18D1B0FF0038F86C /* Supporting Files */,
-			);
-			path = NetworkStatusLoggerTests;
-			sourceTree = "<group>";
-		};
-		236D32FF18D1B0FF0038F86C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				236D330018D1B0FF0038F86C /* NetworkStatusLoggerTests-Info.plist */,
-				236D330118D1B0FF0038F86C /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -265,24 +214,6 @@
 			productReference = 236D32DC18D1B0FF0038F86C /* NetworkStatusLogger.app */;
 			productType = "com.apple.product-type.application";
 		};
-		236D32F618D1B0FF0038F86C /* NetworkStatusLoggerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 236D330B18D1B0FF0038F86C /* Build configuration list for PBXNativeTarget "NetworkStatusLoggerTests" */;
-			buildPhases = (
-				236D32F318D1B0FF0038F86C /* Sources */,
-				236D32F418D1B0FF0038F86C /* Frameworks */,
-				236D32F518D1B0FF0038F86C /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				236D32FD18D1B0FF0038F86C /* PBXTargetDependency */,
-			);
-			name = NetworkStatusLoggerTests;
-			productName = NetworkStatusLoggerTests;
-			productReference = 236D32F718D1B0FF0038F86C /* NetworkStatusLoggerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -292,11 +223,6 @@
 				CLASSPREFIX = NSL;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Sergey Demchenko";
-				TargetAttributes = {
-					236D32F618D1B0FF0038F86C = {
-						TestTargetID = 236D32DB18D1B0FF0038F86C;
-					};
-				};
 			};
 			buildConfigurationList = 236D32D718D1B0FF0038F86C /* Build configuration list for PBXProject "NetworkStatusLogger" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -311,7 +237,6 @@
 			projectRoot = "";
 			targets = (
 				236D32DB18D1B0FF0038F86C /* NetworkStatusLogger */,
-				236D32F618D1B0FF0038F86C /* NetworkStatusLoggerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -327,14 +252,6 @@
 				236D331818D1DF230038F86C /* mogen.sh in Resources */,
 				2304412218D2201000851537 /* NSLRootViewController.xib in Resources */,
 				236D32F218D1B0FF0038F86C /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		236D32F518D1B0FF0038F86C /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				236D330318D1B0FF0038F86C /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,37 +271,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		236D32F318D1B0FF0038F86C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				236D330518D1B0FF0038F86C /* NetworkStatusLoggerTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		236D32FD18D1B0FF0038F86C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 236D32DB18D1B0FF0038F86C /* NetworkStatusLogger */;
-			targetProxy = 236D32FC18D1B0FF0038F86C /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		236D32E818D1B0FF0038F86C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				236D32E918D1B0FF0038F86C /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		236D330118D1B0FF0038F86C /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				236D330218D1B0FF0038F86C /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -490,48 +383,6 @@
 			};
 			name = Release;
 		};
-		236D330C18D1B0FF0038F86C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NetworkStatusLogger.app/NetworkStatusLogger";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NetworkStatusLogger/NetworkStatusLogger-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "NetworkStatusLoggerTests/NetworkStatusLoggerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		236D330D18D1B0FF0038F86C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NetworkStatusLogger.app/NetworkStatusLogger";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "NetworkStatusLogger/NetworkStatusLogger-Prefix.pch";
-				INFOPLIST_FILE = "NetworkStatusLoggerTests/NetworkStatusLoggerTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -549,15 +400,6 @@
 			buildConfigurations = (
 				236D330918D1B0FF0038F86C /* Debug */,
 				236D330A18D1B0FF0038F86C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		236D330B18D1B0FF0038F86C /* Build configuration list for PBXNativeTarget "NetworkStatusLoggerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				236D330C18D1B0FF0038F86C /* Debug */,
-				236D330D18D1B0FF0038F86C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
