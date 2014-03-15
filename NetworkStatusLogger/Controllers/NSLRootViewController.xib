@@ -6,7 +6,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NSLRootViewController">
             <connections>
+                <outlet property="activityIndicator" destination="rwQ-gh-cb6" id="5yV-R3-Dut"/>
                 <outlet property="connectivityStatusLabel" destination="qpM-uZ-YsF" id="9gT-0w-gN9"/>
+                <outlet property="serverAddressTextField" destination="ohF-mR-8S1" id="t3Y-LH-xQi"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -38,7 +40,7 @@
                         <action selector="onConnectButtonTapped:" destination="-1" eventType="touchUpInside" id="3Fl-NF-fZ6"/>
                     </connections>
                 </button>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ohF-mR-8S1" userLabel="Server Address Text Field">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://192.168.0.100:8080" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ohF-mR-8S1" userLabel="Server Address Text Field">
                     <rect key="frame" x="20" y="40" width="280" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <constraints>
@@ -47,6 +49,11 @@
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="rwQ-gh-cb6">
+                    <rect key="frame" x="142" y="265" width="37" height="37"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
@@ -54,7 +61,9 @@
                 <constraint firstItem="ohF-mR-8S1" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="Kdg-TY-RUd"/>
                 <constraint firstAttribute="trailing" secondItem="qpM-uZ-YsF" secondAttribute="trailing" constant="20" id="Pbc-ki-PIc"/>
                 <constraint firstItem="Rdu-EW-TXR" firstAttribute="top" secondItem="ohF-mR-8S1" secondAttribute="bottom" constant="8" id="VDD-Rw-Q4i"/>
+                <constraint firstAttribute="centerY" secondItem="rwQ-gh-cb6" secondAttribute="centerY" id="ZNn-P7-JXr"/>
                 <constraint firstAttribute="trailing" secondItem="ohF-mR-8S1" secondAttribute="trailing" constant="20" id="axI-z9-eMk"/>
+                <constraint firstAttribute="centerX" secondItem="rwQ-gh-cb6" secondAttribute="centerX" id="eu0-KS-K8O"/>
                 <constraint firstItem="ohF-mR-8S1" firstAttribute="top" secondItem="1" secondAttribute="top" constant="40" id="j6y-s2-6cV"/>
                 <constraint firstItem="qpM-uZ-YsF" firstAttribute="top" secondItem="Rdu-EW-TXR" secondAttribute="bottom" constant="14" id="lXt-gx-Smk"/>
                 <constraint firstItem="qpM-uZ-YsF" firstAttribute="leading" secondItem="1" secondAttribute="leading" constant="20" id="ni3-1o-fGN"/>

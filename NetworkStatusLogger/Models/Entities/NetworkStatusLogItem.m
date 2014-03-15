@@ -10,7 +10,7 @@
 
 - (id)initInManagedObjectContext:(NSManagedObjectContext *)context
 {
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:NSStringFromClass(self.class) inManagedObjectContext:context];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:self.class.entityName inManagedObjectContext:context];
     
     self = [self initWithEntity:entityDescription insertIntoManagedObjectContext:nil];
     

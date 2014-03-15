@@ -14,6 +14,7 @@ static NSString *kDBName = @"NetworkStatusLogger";
 @interface NSLAppDelegate ()
 
 @property (strong, nonatomic, readonly) NSManagedObjectContext *managedObjectContext;
+@property (strong, nonatomic, readonly) NSManagedObjectContext *writerManagedObjectContext;
 @property (strong, nonatomic, readonly) NSManagedObjectModel *managedObjectModel;
 @property (strong, nonatomic, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
@@ -24,6 +25,7 @@ static NSString *kDBName = @"NetworkStatusLogger";
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
+@synthesize writerManagedObjectContext = _writerManagedObjectContext;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -31,6 +33,7 @@ static NSString *kDBName = @"NetworkStatusLogger";
     rootViewController.managedObjectContext = self.managedObjectContext;
     
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -38,18 +41,29 @@ static NSString *kDBName = @"NetworkStatusLogger";
 
 - (NSManagedObjectContext *)managedObjectContext
 {
-    if (_managedObjectContext != nil) {
+    if (_managedObjectContext) {
         return _managedObjectContext;
     }
     
-    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
-    if (coordinator != nil) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
-        [_managedObjectContext setPersistentStoreCoordinator:coordinator];
-        [_managedObjectContext setMergePolicy:NSMergeByPropertyStoreTrumpMergePolicy];
-    }
+    _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
+    _managedObjectContext.parentContext = [self writerManagedObjectContext];
     
     return _managedObjectContext;
+}
+
+- (NSManagedObjectContext *)writerManagedObjectContext
+{
+    if (_writerManagedObjectContext) {
+        return _writerManagedObjectContext;
+    }
+    
+    NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
+    if (coordinator) {
+        _writerManagedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        [_writerManagedObjectContext setPersistentStoreCoordinator:coordinator];
+    }
+    
+    return _writerManagedObjectContext;
 }
 
 - (NSManagedObjectModel *)managedObjectModel
@@ -66,7 +80,7 @@ static NSString *kDBName = @"NetworkStatusLogger";
 
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
-    if (_persistentStoreCoordinator != nil) {
+    if (_persistentStoreCoordinator) {
         return _persistentStoreCoordinator;
     }
     
