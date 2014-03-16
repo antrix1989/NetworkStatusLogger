@@ -14,6 +14,7 @@
 		2304412218D2201000851537 /* NSLRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2304412018D2201000851537 /* NSLRootViewController.xib */; };
 		2304412418D222FA00851537 /* NSLMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2304412318D222FA00851537 /* NSLMainWindow.xib */; };
 		233F9AA218D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 233F9AA118D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.m */; };
+		233F9AA518D5B98300742402 /* NSLUniqueDeviceIDService.m in Sources */ = {isa = PBXBuildFile; fileRef = 233F9AA418D5B98300742402 /* NSLUniqueDeviceIDService.m */; };
 		236D32E018D1B0FF0038F86C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32DF18D1B0FF0038F86C /* Foundation.framework */; };
 		236D32E218D1B0FF0038F86C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32E118D1B0FF0038F86C /* CoreGraphics.framework */; };
 		236D32E418D1B0FF0038F86C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32E318D1B0FF0038F86C /* UIKit.framework */; };
@@ -65,6 +66,8 @@
 		2304412318D222FA00851537 /* NSLMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSLMainWindow.xib; sourceTree = "<group>"; };
 		233F9AA018D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+NSLAdditions.h"; sourceTree = "<group>"; };
 		233F9AA118D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+NSLAdditions.m"; sourceTree = "<group>"; };
+		233F9AA318D5B98300742402 /* NSLUniqueDeviceIDService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLUniqueDeviceIDService.h; sourceTree = "<group>"; };
+		233F9AA418D5B98300742402 /* NSLUniqueDeviceIDService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLUniqueDeviceIDService.m; sourceTree = "<group>"; };
 		236D32DC18D1B0FF0038F86C /* NetworkStatusLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkStatusLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236D32DF18D1B0FF0038F86C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		236D32E118D1B0FF0038F86C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,6 +137,8 @@
 		233F9A9F18D5AE1D00742402 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				233F9AA318D5B98300742402 /* NSLUniqueDeviceIDService.h */,
+				233F9AA418D5B98300742402 /* NSLUniqueDeviceIDService.m */,
 				233F9AA018D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.h */,
 				233F9AA118D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.m */,
 			);
@@ -329,6 +334,7 @@
 				233F9AA218D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.m in Sources */,
 				23A3FDD518D4E8180058924E /* NSLNetworkStatusLogger.m in Sources */,
 				2304412118D2201000851537 /* NSLRootViewController.m in Sources */,
+				233F9AA518D5B98300742402 /* NSLUniqueDeviceIDService.m in Sources */,
 				2304411718D1FE9B00851537 /* NetworkStatusLogger.xcdatamodeld in Sources */,
 				2304411518D1FE9B00851537 /* NetworkStatusLogItem.m in Sources */,
 				236D32F018D1B0FF0038F86C /* NSLAppDelegate.m in Sources */,

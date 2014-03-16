@@ -72,7 +72,7 @@
 - (AFHTTPRequestOperation *)getRequestOperationForLogItem:(NetworkStatusLogItem *)logItem
                                               withContext:(NSManagedObjectContext *)managedObjectContext
 {
-    NSDictionary *parameters = @{@"type":logItem.connectivityStatus, @"unique_id":@1};
+    NSDictionary *parameters = @{@"type":logItem.connectivityStatus, @"unique_id":[NSLUniqueDeviceIDService uniqueDeviceID]};
     NSURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:self.serverUrl parameters:parameters error:nil];
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];

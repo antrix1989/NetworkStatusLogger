@@ -16,4 +16,5 @@
     #import <CoreData/CoreData.h>
     #import "NSManagedObjectContext+NSLAdditions.h"
     #import "NSLNetworkService.h"
+    #import "NSLUniqueDeviceIDService.h"
 #endif
