@@ -91,8 +91,6 @@
         }
     };
     
-    [self performBlock:saveBlock];
-    
     if (synchronously) {
         [self performBlockAndWait:saveBlock];
     } else {
