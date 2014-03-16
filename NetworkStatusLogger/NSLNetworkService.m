@@ -28,6 +28,18 @@
 - (void)synchronizeDbInContext:(NSManagedObjectContext *)managedObjectContext
          withCompletionHandler:(void (^)(BOOL success))completion;
 {
+    if (!self.serverUrl && completion) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            completion(NO);
+        });
+        
+        return;
+    }
+    
+    if (!self.serverUrl) {
+        return;
+    }
+    
     // Cancell all not finished operations if we have some.
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager.operationQueue cancelAllOperations];

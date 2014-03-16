@@ -84,7 +84,7 @@ NSString *const NSLLogItemDidSaveNotificationLogItem = @"NSLLogItemDidSaveNotifi
     [temporaryContext saveSynchronously:NO toPersistentStoreWithCompletion:^(BOOL success, NSError *error) {
         if (success) {
             NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
-            [notificationCenter postNotificationName:NSLLogItemDidSaveNotification object:nil userInfo:@{ NSLLogItemDidSaveNotificationLogItem:logItem}];
+            [notificationCenter postNotificationName:NSLLogItemDidSaveNotification object:nil userInfo:@{NSLLogItemDidSaveNotificationLogItem:logItem}];
         }
     }];
 }

@@ -13,6 +13,7 @@
 		2304412118D2201000851537 /* NSLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2304411F18D2201000851537 /* NSLRootViewController.m */; };
 		2304412218D2201000851537 /* NSLRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2304412018D2201000851537 /* NSLRootViewController.xib */; };
 		2304412418D222FA00851537 /* NSLMainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2304412318D222FA00851537 /* NSLMainWindow.xib */; };
+		233F9AA218D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 233F9AA118D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.m */; };
 		236D32E018D1B0FF0038F86C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32DF18D1B0FF0038F86C /* Foundation.framework */; };
 		236D32E218D1B0FF0038F86C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32E118D1B0FF0038F86C /* CoreGraphics.framework */; };
 		236D32E418D1B0FF0038F86C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 236D32E318D1B0FF0038F86C /* UIKit.framework */; };
@@ -24,7 +25,6 @@
 		236D331918D1DF230038F86C /* mogend.sh in Resources */ = {isa = PBXBuildFile; fileRef = 236D331718D1DF230038F86C /* mogend.sh */; };
 		23A3FDC618D2F94E0058924E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23A3FDC518D2F94E0058924E /* CoreData.framework */; };
 		23A3FDCF18D47EFD0058924E /* NSLNetworkService.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A3FDCE18D47EFD0058924E /* NSLNetworkService.m */; };
-		23A3FDD218D484060058924E /* NSManagedObjectContext+NSLAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A3FDD118D484060058924E /* NSManagedObjectContext+NSLAdditions.m */; };
 		23A3FDD518D4E8180058924E /* NSLNetworkStatusLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A3FDD418D4E8180058924E /* NSLNetworkStatusLogger.m */; };
 		9CA9E0032A074F56884769D2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E44FAF84C9BA4B8ABEB97AD4 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -63,6 +63,8 @@
 		2304411F18D2201000851537 /* NSLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLRootViewController.m; sourceTree = "<group>"; };
 		2304412018D2201000851537 /* NSLRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSLRootViewController.xib; sourceTree = "<group>"; };
 		2304412318D222FA00851537 /* NSLMainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSLMainWindow.xib; sourceTree = "<group>"; };
+		233F9AA018D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+NSLAdditions.h"; sourceTree = "<group>"; };
+		233F9AA118D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+NSLAdditions.m"; sourceTree = "<group>"; };
 		236D32DC18D1B0FF0038F86C /* NetworkStatusLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkStatusLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		236D32DF18D1B0FF0038F86C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		236D32E118D1B0FF0038F86C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,8 +81,6 @@
 		23A3FDC518D2F94E0058924E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		23A3FDCD18D47EFD0058924E /* NSLNetworkService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLNetworkService.h; sourceTree = "<group>"; };
 		23A3FDCE18D47EFD0058924E /* NSLNetworkService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLNetworkService.m; sourceTree = "<group>"; };
-		23A3FDD018D484060058924E /* NSManagedObjectContext+NSLAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObjectContext+NSLAdditions.h"; sourceTree = "<group>"; };
-		23A3FDD118D484060058924E /* NSManagedObjectContext+NSLAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObjectContext+NSLAdditions.m"; sourceTree = "<group>"; };
 		23A3FDD318D4E8180058924E /* NSLNetworkStatusLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLNetworkStatusLogger.h; sourceTree = "<group>"; };
 		23A3FDD418D4E8180058924E /* NSLNetworkStatusLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLNetworkStatusLogger.m; sourceTree = "<group>"; };
 		CFE7E5505FB440869E757FED /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -131,6 +131,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		233F9A9F18D5AE1D00742402 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				233F9AA018D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.h */,
+				233F9AA118D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		236D32D318D1B0FF0038F86C = {
 			isa = PBXGroup;
 			children = (
@@ -171,11 +180,10 @@
 				23A3FDCE18D47EFD0058924E /* NSLNetworkService.m */,
 				23A3FDD318D4E8180058924E /* NSLNetworkStatusLogger.h */,
 				23A3FDD418D4E8180058924E /* NSLNetworkStatusLogger.m */,
-				23A3FDD018D484060058924E /* NSManagedObjectContext+NSLAdditions.h */,
-				23A3FDD118D484060058924E /* NSManagedObjectContext+NSLAdditions.m */,
 				2304411D18D2201000851537 /* Controllers */,
 				236D331118D1B9570038F86C /* Models */,
 				236D331518D1DF230038F86C /* Scripts */,
+				233F9A9F18D5AE1D00742402 /* Utils */,
 				236D32F118D1B0FF0038F86C /* Images.xcassets */,
 				236D32E618D1B0FF0038F86C /* Supporting Files */,
 			);
@@ -318,9 +326,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				233F9AA218D5AE1D00742402 /* NSManagedObjectContext+NSLAdditions.m in Sources */,
 				23A3FDD518D4E8180058924E /* NSLNetworkStatusLogger.m in Sources */,
 				2304412118D2201000851537 /* NSLRootViewController.m in Sources */,
-				23A3FDD218D484060058924E /* NSManagedObjectContext+NSLAdditions.m in Sources */,
 				2304411718D1FE9B00851537 /* NetworkStatusLogger.xcdatamodeld in Sources */,
 				2304411518D1FE9B00851537 /* NetworkStatusLogItem.m in Sources */,
 				236D32F018D1B0FF0038F86C /* NSLAppDelegate.m in Sources */,

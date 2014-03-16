@@ -11,7 +11,7 @@
 #import "NSLNetworkStatusLogger.h"
 #import <AFNetworking/AFNetworkReachabilityManager.h>
 
-@interface NSLRootViewController ()
+@interface NSLRootViewController () <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *connectivityStatusLabel;
 @property (weak, nonatomic) IBOutlet UITextField *serverAddressTextField;
@@ -35,11 +35,6 @@
     [super viewDidLoad];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(onNetworkConnectivityChangeNotification:)
-                                                 name:AFNetworkingReachabilityDidChangeNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(onLogItemDidSaveNotification:)
                                                  name:NSLLogItemDidSaveNotification
                                                object:nil];
@@ -51,7 +46,23 @@
     
     [NSLNetworkStatusLogger sharedInstance].managedObjectContext = self.managedObjectContext;
     [[NSLNetworkStatusLogger sharedInstance] startLogging];
+    
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        [self updateUi];
+    }];
+    
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+    [self updateUi];
+}
+
+#pragma mark - UITextField
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 #pragma mark - IBAction
@@ -68,29 +79,31 @@
 
 #pragma mark - NSNotification
 
-- (void)onNetworkConnectivityChangeNotification:(NSNotification *)notification
-{
-    switch ([AFNetworkReachabilityManager sharedManager].networkReachabilityStatus) {
-        case AFNetworkReachabilityStatusReachableViaWiFi:
-            self.connectivityStatusLabel.text = NSLocalizedString(@"WiFi", nil);
-            break;
-
-        case AFNetworkReachabilityStatusReachableViaWWAN:
-            self.connectivityStatusLabel.text = NSLocalizedString(@"3G", nil);
-            break;
-
-        default:
-            self.connectivityStatusLabel.text = NSLocalizedString(@"NoConnection", nil);
-            break;
-    }
-}
-
 - (void)onLogItemDidSaveNotification:(NSNotification *)notification
 {
     [self.activityIndicator startAnimating];
     [[NSLNetworkService sharedInstance] synchronizeDbInContext:self.managedObjectContext withCompletionHandler:^(BOOL success) {
         [self.activityIndicator stopAnimating];
     }];
+}
+
+#pragma mark - Private
+
+- (void)updateUi
+{
+    switch ([AFNetworkReachabilityManager sharedManager].networkReachabilityStatus) {
+        case AFNetworkReachabilityStatusReachableViaWiFi:
+            self.connectivityStatusLabel.text = NSLocalizedString(@"WiFi", nil);
+            break;
+            
+        case AFNetworkReachabilityStatusReachableViaWWAN:
+            self.connectivityStatusLabel.text = NSLocalizedString(@"3G", nil);
+            break;
+            
+        default:
+            self.connectivityStatusLabel.text = NSLocalizedString(@"NoConnection", nil);
+            break;
+    }
 }
 
 @end

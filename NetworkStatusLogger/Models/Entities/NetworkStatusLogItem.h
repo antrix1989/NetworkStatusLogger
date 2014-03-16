@@ -2,10 +2,6 @@
 
 @interface NetworkStatusLogItem : _NetworkStatusLogItem {}
 
-- (id)initInManagedObjectContext:(NSManagedObjectContext *)context;
-
-- (void)saveInManagedObjectContext:(NSManagedObjectContext *)context;
-
 @end
 
 typedef NS_ENUM(NSInteger, NSLConnectivityStatus)
